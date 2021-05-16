@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Notes</h1>
+<h2>Notes <%= octicon "book", :height => 24 %></h2>
 <table>
   <thead>
     <tr>
-      <th>Note</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,14 +12,11 @@
     <% @notes.each do |note| %>
       <tr>
         <td><%= note.note %></td>
-        <td><%= link_to 'Show', note %></td>
-        <td><%= link_to 'Edit', edit_note_path(note) %></td>
-        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><a href=<%="/notes/#{note.id}"%>><%= octicon "eye", :height => 16 %></a></td>
+        <td><a rel="nofollow" data-method="delete" href=<%="/notes/#{note.id}"%>><%= octicon "x-circle-fill", :height => 16 %></a></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Note', new_note_path %>
