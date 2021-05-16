@@ -1,0 +1,35 @@
+<button onclick="alert('ruby sucks!')"/>button</button>
+
+
+<%#= form_for :note do |f| %>
+<!--  <p>-->
+    <%#=f.label "hello" %>
+    <%# f.text_area  %>
+<!--    <p>-->
+      <%#=f.label "tags" %>
+      <%# f.text_field  %>
+<!--    </p>-->
+<!--    <p>-->
+      <%#= f.submit %>
+<!--  </p>-->
+<%#end %>
+
+<label for="exampleFormControlTextarea1" class="form-label">Note</label>
+<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+
+<label for="exampleFormControlInput1" class="form-label">Tags</label>
+<input type="email" class="form-control" list="tagList" id="exampleFormControlInput1">
+
+
+  <datalist id="tagList">
+    <% @tags.each do |tag| %>
+    <option value=<%= tag.tag %>>
+    <% end %>
+  </datalist>
+
+  </br><br/>
+
+
+  <button type="button" class="btn btn-primary" onclick="alert(`submit!`)">Submit</button>
+  <button type="button" class="btn btn-danger" onclick="alert(`reset`)">Reset</button>

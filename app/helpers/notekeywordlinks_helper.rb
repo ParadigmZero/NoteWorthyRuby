@@ -1,0 +1,2 @@
+module NotekeywordlinksHelper
+end

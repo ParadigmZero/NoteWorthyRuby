@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Notekeywordlinks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notekeywordlinks.each do |notekeywordlink| %>
+      <tr>
+        <td><%= link_to 'Show', notekeywordlink %></td>
+        <td><%= link_to 'Edit', edit_notekeywordlink_path(notekeywordlink) %></td>
+        <td><%= link_to 'Destroy', notekeywordlink, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Notekeywordlink', new_notekeywordlink_path %>
