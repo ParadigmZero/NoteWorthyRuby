@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Note:</strong>
+  <strong>Note:</strong><br/>
   <%= @note.note %>
+<br/><br/>
+<!--  include tags too-->
+  <strong>Tags:</strong><br/>
+  <% @keywords.each do |tag| %>
+    <%= tag.tag %><br/>
+  <% end %>
 </p>
 
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>

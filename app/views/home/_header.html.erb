@@ -1,0 +1,39 @@
+<STYLE type="text/css">
+
+    a{
+        text-decoration:none;
+        color: #000000;
+        font-weight:bold;
+    }
+
+    /* mouse over link */
+    a:hover {
+        color: #000000;
+    }
+
+
+
+</STYLE>
+
+
+<center>
+<table class="topbar"  cellpadding="50">
+  <tbody >
+  <tr>
+
+
+    <% if !(current_page?root_url)%>
+      <td><a href="/" >New&nbsp;&nbsp;<%= octicon "pencil", :height => 24 %></a></td>
+    <%end %>
+
+    <% if !(current_page? notes_url)%>
+    <td><a href="/notes" >&nbsp;Notes&nbsp;&nbsp;&nbsp;<%= octicon "book", :height => 24 %></a>          </td>
+    <% end %>
+    <% if !(current_page? keywords_url)%>
+    <td><a href="/keywords" >Tags&nbsp;&nbsp;&nbsp;<%= octicon "bookmark", :height => 24 %></a>          </td>
+    <% end %>
+
+  </tr>
+  </tbody>
+</table>
+</center>

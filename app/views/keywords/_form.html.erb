@@ -1,22 +1,11 @@
-<%= form_with(model: keyword) do |form| %>
-  <% if keyword.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(keyword.errors.count, "error") %> prohibited this keyword from being saved:</h2>
-
-      <ul>
-        <% keyword.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<form action="/keywords" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="j61Vj3vqbO-RBxzTcYx62luH3a-qVYmF-R9B18rtoCuQKKWLWHCCMVl8LO98Ns7ySgAzPJsvo6-Abj9x2mpfRA" />
 
   <div class="field">
-    <%= form.label :tag %>
-    <%= form.text_field :tag %>
+    <input type="text" name="keyword[tag]" id="keyword_tag" />
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+  </br> </br>
+    <button type="submit" value="Submit"><%= octicon "check-circle-fill", :height => 48 %></button>
   </div>
-<% end %>
+</form>
