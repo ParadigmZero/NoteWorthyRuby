@@ -20,7 +20,6 @@ class NotesController < ApplicationController
 
   # GET /notes/new
   def new
-    @notes = Note.all
     # keywords used since we submit keywords when we submit notes
     @keywords = Keyword.all
 
