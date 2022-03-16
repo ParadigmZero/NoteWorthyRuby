@@ -1,12 +1,6 @@
 # README
 
-
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
+A simple Note taking application made on the Ruby on Rails framework.
 
 # Database
 
@@ -27,16 +21,3 @@ id serial NOT NULL PRIMARY KEY,
 tagid INTEGER REFERENCES tags (id) NOT NULL,
 noteid INTEGER REFERENCES notes (id) NOT NULL
 );
-
-
-
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
